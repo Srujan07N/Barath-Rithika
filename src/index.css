@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-champagne: #F7EBDD;
+    --color-ivory: #FFF8EF;
+    --color-burgundy: #781F35;
+    --color-rose: #B76E79;
+    --color-copper: #B87950;
+    --color-espresso: #38251F;
+    --color-gold: #D6B77A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    background-color: #FFF8EF;
+    color: #38251F;
+  }
+
+  /* Custom royal scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F7EBDD;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #B87950;
+    border-radius: 4px;
+    border: 2px solid #F7EBDD;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #781F35;
+  }
+}
+
+/* Luxurious Indian Wedding Textured Paper */
+.paper-texture {
+  background-color: #FFF8EF;
+  background-image: 
+    radial-gradient(#D6B77A 0.75px, transparent 0.75px),
+    radial-gradient(#B87950 0.5px, #FFF8EF 0.5px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.paper-texture-warm {
+  background: linear-gradient(135deg, #FFFDF8 0%, #FFF8EF 50%, #F7EBDD 100%);
+  position: relative;
+}
+
+.paper-texture-warm::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Gold foil text shimmer */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #9F7C38 0%, #D6B77A 35%, #FFF3D6 50%, #D6B77A 65%, #B87950 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-burgundy-gradient {
+  background: linear-gradient(135deg, #781F35 0%, #962A45 50%, #581324 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ornate Gold Border */
+.gold-zari-border {
+  border: 2px solid #D6B77A;
+  box-shadow: 
+    0 0 0 4px #FFF8EF,
+    0 0 0 5px rgba(214, 183, 122, 0.4),
+    0 0 0 8px #FFF8EF,
+    0 0 0 9px #B87950;
+}
+
+.gold-double-border {
+  border: 1px solid #D6B77A;
+  position: relative;
+}
+.gold-double-border::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px dashed rgba(214, 183, 122, 0.7);
+  pointer-events: none;
+}
+
+/* Door 3D Perspective Fallback */
+.perspective-1200 {
+  perspective: 1200px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Subtle glow animations */
+@keyframes diyaFlicker {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(255, 183, 3, 0.8));
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-1px);
+    filter: drop-shadow(0 0 12px rgba(255, 214, 10, 0.9));
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(0.98);
+    filter: drop-shadow(0 0 7px rgba(251, 133, 0, 0.7));
+  }
+  75% {
+    opacity: 0.95;
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 10px rgba(255, 183, 3, 0.85));
+  }
+}
+
+.diya-flame {
+  animation: diyaFlicker 2.5s infinite ease-in-out;
+  transform-origin: center bottom;
+}
+
+/* Music Sound Bar Wave */
+@keyframes soundWave {
+  0%, 100% { height: 4px; }
+  50% { height: 18px; }
+}
+
+.sound-bar-1 { animation: soundWave 1.2s ease-in-out infinite 0.1s; }
+.sound-bar-2 { animation: soundWave 1.2s ease-in-out infinite 0.3s; }
+.sound-bar-3 { animation: soundWave 1.2s ease-in-out infinite 0.2s; }
+.sound-bar-4 { animation: soundWave 1.2s ease-in-out infinite 0.4s; }
+
+/* Traditional Toran and Garland pattern */
+.garland-curve {
+  border-radius: 0 0 50% 50%;
+}
